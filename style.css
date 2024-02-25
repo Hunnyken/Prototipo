@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins ,sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(https://pbs.twimg.com/media/DMDIKcyWsAEsKDj?format=jpg&name=4096x4096);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.logo{
+    font-size: 2em;
+    color: white;
+    user-select: none;
+    text-decoration: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1)
+}
+
+.navigation .btlogin{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.navigation .btlogin:hover {
+    background: rgb(238, 238, 238);
+    color: black;
+    transition: .5s;
+}
+
+.texto {
+    color: rgba(252, 252, 252, 0.562);
+    width: 100vh;
+    margin-left: 57vh;
+    font-family: 'Poppins';
+    font-size: 50px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgb(6, 186, 218) 0%, rgba(6, 152, 172, 0.818) 35%, rgba(0,212,255,1) 100%);
+    background-size: 400% 100%;    
+    animation: degrade 20s linear infinite alternate;
+    background-position: center;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes degrade {
+    100%{
+        background-position-x: 100%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+                                    /*PÁGINA DE LOGIN */
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1{
+    color: rgb(16, 63, 165);
+    font-size: 3vw;
+    user-select: none;
+}
+
+.left-login-image{
+    width: 30vw;
+}
+
+.right-login{
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #025175;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1{
+    color: rgb(8, 226, 172);
+    font-weight: 800;
+    user-select: none;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #2866837e;
+    color: rgb(218, 208, 208);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > input:hover{
+    border: 1px solid rgb(24, 145, 167);
+}
+
+.textfield > label{
+    color: rgb(218, 208, 208);
+    margin-bottom: 10px;
+}
+.textfield > input::placeholder{
+    color: rgb(155, 152, 152);
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border:none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    box-shadow: 0px 10px 40px -12px #00000056;
+}
+
+.btn-login:hover{
+    background: #06202c7e;
+    transition: .5s;
+    cursor: pointer;
+    color: rgb(206, 201, 201);
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+
+    .left-login > h1{
+        display: none;
+    }
+
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image{
+        width: 50vw;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Document</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8"> <!--Comando para habilitar todos os tipos de caracteres especiais para não bugar o código-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><h2 class="logo">Logo</h2></a>
+            <nav class="navigation">
+                <a href="index.html">Página Inicial</a>
+                <a href="B">Sobre</a>
+                <a href="C">Serviços</a>
+                <a href="D">Contatos</a>
+            </nav>
+        </header><br>
+        
+        <div class="main-login">
+
+            <div class="left-login">
+            <img src="imagens/logo-login-animado.svg" class="left-login-image" alt="Desbravador">
+            </div>
+            <div class="right-login">
+                <div class="card-login">
+                    <h1>LOGIN</h1>
+                    <div class="textfield">
+                        <label for="Usuário">Usuário</label><!--label se refere ao "rótulo" do input, ajuda o usuário a entender o preenchimento de dados-->
+                        <input type="text" name="usuario" placeholder="Usuário" autofocus><!--o autofocus permite que, ao carregar a página, o input "Usuário" seja automaticamente *focado*,sem a necessidade do usuário ter que clicar para poder digitar-->
+                    </div>
+
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha">
+                    </div>
+                    <button class="btn-login">Logar</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
